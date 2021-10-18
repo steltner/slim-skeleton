@@ -1,0 +1,25 @@
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    beStrictAboutChangesToGlobalState="true"
+    beStrictAboutOutputDuringTests="true"
+    colors="true"
+    bootstrap="vendor/autoload.php"
+>
+    <testsuites>
+        <testsuite name="Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <exclude>
+            <file>src/dependencies.php</file>
+            <file>src/handler.php</file>
+            <file>src/routes.php</file>
+            <file>src/settings.php</file>
+        </exclude>
+    </coverage>
+</phpunit>
